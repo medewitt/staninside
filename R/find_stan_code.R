@@ -37,6 +37,7 @@ find_stan_code <- function(pkgname = "staninside"){
 							stan_pkg_contents = stan_pkg_contents))
 }
 
+#'@export
 print.stancode <- function(x, ...){
 	cat(x, sep = "\n")
 }

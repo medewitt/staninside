@@ -7,6 +7,10 @@
 #' @param local_location a file path representing the desired location
 #'   of the local copy.
 #' @export
+#'
+#' @examples
+#' local_location <- tempdir()
+#' copy_models(pkgname = "staninside", local_location  = local_location)
 
 copy_models <- function(pkgname = "staninside", local_location  = NULL){
 
