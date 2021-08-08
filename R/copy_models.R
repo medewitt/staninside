@@ -21,10 +21,14 @@ copy_models <- function(pkgname = "staninside", local_location  = NULL){
 	stan_code_to_copy <- find_stan_code(pkgname)
 
 	pkg_location <- names(stan_code_to_copy$base_stan_location)
-	new_locations <- file.path(local_location, stan_code_to_copy$base_stan_location)
 
-	dirs_needed <- unique(gsub(pattern = "/.+$", "",
-											stan_code_to_copy$base_stan_location))
+	new_locations_base <- gsub(pattern = ".+/stan/","",pkg_location)
+
+	new_locations <- file.path(local_location,new_locations_base)
+
+	dirs_needed <- unique(dirname(new_locations_base))
+
+	dirs_needed <- dirs_needed[dirs_needed!="."]
 
 	dirs_needed <- dirs_needed[!grepl(dirs_needed, pattern = ".stan")]
 
