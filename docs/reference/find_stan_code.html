@@ -74,7 +74,7 @@ and the text of the code," />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">staninside</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
       </span>
     </div>
 
@@ -91,7 +91,12 @@ and the text of the code," />
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/medewitt/staninside/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -106,7 +111,7 @@ and the text of the code," />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Find Stan Code</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/medewitt/staninside/blob/master/R/find_stan_code.R'><code>R/find_stan_code.R</code></a></small>
     <div class="hidden name"><code>find_stan_code.Rd</code></div>
     </div>
 
@@ -132,11 +137,34 @@ look for the Stan code.</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>find_stan_code</span><span class='op'>(</span>pkgname <span class='op'>=</span> <span class='st'>"staninside"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $base_stan_location
-#&gt; /private/var/folders/0x/6bnjy4n15kz8nbfbbwbyk3pr0000gn/T/RtmpXnWGu7/temp_libpathe35cba96c9d/staninside/stan/test.stan 
-#&gt;                                                                                                           "test.stan" 
+#&gt; /private/var/folders/0x/6bnjy4n15kz8nbfbbwbyk3pr0000gn/T/Rtmpy8gGpd/temp_libpath5be220195e2d/staninside/stan/functions/func.stan 
+#&gt;                                                                                                            "functions/func.stan" 
+#&gt;           /private/var/folders/0x/6bnjy4n15kz8nbfbbwbyk3pr0000gn/T/Rtmpy8gGpd/temp_libpath5be220195e2d/staninside/stan/test.stan 
+#&gt;                                                                                                                      "test.stan" 
+#&gt;          /private/var/folders/0x/6bnjy4n15kz8nbfbbwbyk3pr0000gn/T/Rtmpy8gGpd/temp_libpath5be220195e2d/staninside/stan/test2.stan 
+#&gt;                                                                                                                     "test2.stan" 
 #&gt; 
 #&gt; $stan_pkg_contents
+#&gt; $stan_pkg_contents$`functions/func.stan`
+#&gt; 
+#&gt; 
 #&gt; $stan_pkg_contents$test.stan
+#&gt; data{
+#&gt; 	int&lt;lower=1&gt; N;
+#&gt; 	real x [N];
+#&gt; 	real y [N];
+#&gt; }
+#&gt; parameters{
+#&gt; 	real alpha;
+#&gt; 	real beta;
+#&gt; 	real&lt;lower=0&gt; sigma;
+#&gt; }
+#&gt; model{
+#&gt; 
+#&gt; 	target += normal_lpdf(y | alpha + beta * x, sigma);
+#&gt; }
+#&gt; 
+#&gt; $stan_pkg_contents$test2.stan
 #&gt; data{
 #&gt; 	int&lt;lower=1&gt; N;
 #&gt; 	real x [N];
