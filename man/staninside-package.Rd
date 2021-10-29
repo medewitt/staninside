@@ -4,15 +4,18 @@
 \name{staninside-package}
 \alias{staninside}
 \alias{staninside-package}
-\title{staninside: Helper Functions for CmdStanR Based Packages}
+\title{staninside: Facilitating the use of CmdStanR in R Packages}
 \description{
-This package provides helper functions that can be used for integrating Stan code driven
-    by the CmdStanR package. Using CmdStanR and pre-written Stan code can make
-    package installation easy and less prone to fail because it removes the 
-    need for Rcpp and RStan packages(and their dependencies). Using CmdStanR
-    will also afford users the opportunity to use the latest developments
-    within CmdStan. However, building these packages requires some work and this
-    package provides tools to assist with that,
+This package provides helper functions that can be used for integrating Stan code driven by the CmdStanR package. Using CmdStanR and pre-written Stan code can make package installation easy and less prone to fail because it removes the need for Rcpp and RStan packages(and their dependencies). Using CmdStanR will also afford users the opportunity to use the latest developments within CmdStan. However, building these packages requires some work and this package provides tools to assist with that,
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/medewitt/staninside}
+  \item \url{https://michaeldewittjr.com/staninside/}
+  \item Report bugs at \url{https://github.com/medewitt/staninside/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Michael DeWitt \email{me.dewitt.jr@gmail.com} (\href{https://orcid.org/0000-0001-8940-1967}{ORCID})

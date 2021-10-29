@@ -43,3 +43,7 @@ Per <https://cran.r-project.org/web/packages/policies.html>
 
 Staninside seeks to resolve this issue by providing a framework for package authors who wish to use Stan and CmdStanR to stay in compliance with CRAN Policies.
 This is done by providing helper functions with write and compile Stan code from within a package to the user's package cache using the `rappdirs` package. 
+
+## Code of Conduct
+
+Please note that the staninside project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

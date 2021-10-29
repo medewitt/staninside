@@ -1,6 +1,6 @@
 Package: staninside
-Title: Helper Functions for CmdStanR Based Packages
-Version: 0.0.1.9000
+Title: Facilitating the use of CmdStanR in R Packages
+Version: 0.0.2
 Authors@R: 
     person(given = "Michael",
            family = "DeWitt",
@@ -15,6 +15,8 @@ Description: This package provides helper functions that can be used for integra
     within CmdStan. However, building these packages requires some work and this
     package provides tools to assist with that,
 License: MIT + file LICENSE
+URL: https://github.com/medewitt/staninside, https://michaeldewittjr.com/staninside/
+BugReports: https://github.com/medewitt/staninside/issues
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -24,7 +26,6 @@ Suggests:
     spelling,
     tinytest
 Imports: 
-    assertthat,
     fs,
     rappdirs
 Language: en-US

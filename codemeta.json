@@ -1,0 +1,106 @@
+{
+  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@type": "SoftwareSourceCode",
+  "identifier": "staninside",
+  "description": "This package provides helper functions that can be used for integrating Stan code driven\n    by the CmdStanR package. Using CmdStanR and pre-written Stan code can make\n    package installation easy and less prone to fail because it removes the \n    need for Rcpp and RStan packages(and their dependencies). Using CmdStanR\n    will also afford users the opportunity to use the latest developments\n    within CmdStan. However, building these packages requires some work and this\n    package provides tools to assist with that,",
+  "name": "staninside: Facilitating the use of CmdStanR in R Packages",
+  "codeRepository": "https://github.com/medewitt/staninside",
+  "relatedLink": "https://michaeldewittjr.com/staninside/",
+  "issueTracker": "https://github.com/medewitt/staninside/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.0.2",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.1.0 (2021-05-18)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Michael",
+      "familyName": "DeWitt",
+      "email": "me.dewitt.jr@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8940-1967"
+    }
+  ],
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {},
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Michael",
+      "familyName": "DeWitt",
+      "email": "me.dewitt.jr@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8940-1967"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "covr",
+      "name": "covr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=covr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "spelling",
+      "name": "spelling",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=spelling"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "tinytest",
+      "name": "tinytest",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tinytest"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "fs",
+      "name": "fs",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=fs"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rappdirs",
+      "name": "rappdirs",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=rappdirs"
+    }
+  ],
+  "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
+  "fileSize": "10.939KB",
+  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main"]
+}

@@ -12,8 +12,9 @@
 
 find_stan_code <- function(pkgname = "staninside"){
 
-	assertthat::assert_that(pkgname %in% rownames(installed.packages()),
-													msg = sprintf("`%s` is not an installed package.\n", pkgname))
+	if(!pkgname %in% rownames(installed.packages())){
+		stop(sprintf("`%s` is not an installed package.\n", pkgname))
+	}
 
 	stan_pkg_location <- fs::dir_ls(system.file(package = pkgname),
 						 glob = "*.stan", recurse = TRUE)
