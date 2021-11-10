@@ -8,3 +8,13 @@ Rcpp
 pre
 rstan
 DeWitt
+CRAN
+https
+testthat
+cran
+tinytest
+dplyr
+tidyverse
+TMPDIR
+filespace
+Github
