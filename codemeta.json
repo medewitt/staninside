@@ -81,6 +81,12 @@
   "softwareRequirements": [
     {
       "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.1"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "fs",
       "name": "fs",
       "provider": {
@@ -105,7 +111,7 @@
     }
   ],
   "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
-  "fileSize": "12.771KB",
+  "fileSize": "12.868KB",
   "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main"],
   "releaseNotes": "https://github.com/medewitt/staninside/blob/master/NEWS.md",
   "keywords": [
