@@ -6,7 +6,7 @@
   "@type": "SoftwareSourceCode",
   "identifier": "staninside",
   "description": "This package provides helper functions that can be used for integrating Stan code driven by the CmdStanR package. Using CmdStanR and pre-written Stan code can make package installation easy and less prone to fail because it removes the need for Rcpp and RStan packages(and their dependencies). Using CmdStanR will also afford users the opportunity to use the latest developments within CmdStan. However, building these packages requires some work and this package provides tools to assist with that,",
-  "name": "staninside: Facilitating the use of CmdStanR in R Packages",
+  "name": "staninside: Facilitating the Use of Stan Within Packages",
   "codeRepository": "https://github.com/medewitt/staninside",
   "relatedLink": "https://michaeldewittjr.com/staninside/",
   "issueTracker": "https://github.com/medewitt/staninside/issues",
@@ -81,6 +81,12 @@
   "softwareRequirements": [
     {
       "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.1"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "fs",
       "name": "fs",
       "provider": {
@@ -105,7 +111,7 @@
     }
   ],
   "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
-  "fileSize": "12.171KB",
+  "fileSize": "12.868KB",
   "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main"],
   "releaseNotes": "https://github.com/medewitt/staninside/blob/master/NEWS.md",
   "keywords": [

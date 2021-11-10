@@ -9,3 +9,5 @@
 ^codecov\.yml$
 ^CODE_OF_CONDUCT\.md$
 ^codemeta\.json$
+^_push\.R$
+^Makefile$

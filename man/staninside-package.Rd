@@ -4,7 +4,7 @@
 \name{staninside-package}
 \alias{staninside}
 \alias{staninside-package}
-\title{staninside: Facilitating the use of CmdStanR in R Packages}
+\title{staninside: Facilitating the Use of Stan Within Packages}
 \description{
 This package provides helper functions that can be used for integrating Stan code driven by the CmdStanR package. Using CmdStanR and pre-written Stan code can make package installation easy and less prone to fail because it removes the need for Rcpp and RStan packages(and their dependencies). Using CmdStanR will also afford users the opportunity to use the latest developments within CmdStan. However, building these packages requires some work and this package provides tools to assist with that,
 }
