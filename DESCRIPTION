@@ -1,6 +1,6 @@
 Package: staninside
 Title: Facilitating the use of CmdStanR in R Packages
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     person(given = "Michael",
            family = "DeWitt",
@@ -24,8 +24,9 @@ RoxygenNote: 7.1.1
 Suggests: 
     covr,
     spelling,
-    tinytest
+    testthat (>= 3.0.0)
 Imports: 
     fs,
     rappdirs
 Language: en-US
+Config/testthat/edition: 3

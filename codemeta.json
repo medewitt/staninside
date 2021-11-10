@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "staninside",
   "description": "This package provides helper functions that can be used for integrating Stan code driven\n    by the CmdStanR package. Using CmdStanR and pre-written Stan code can make\n    package installation easy and less prone to fail because it removes the \n    need for Rcpp and RStan packages(and their dependencies). Using CmdStanR\n    will also afford users the opportunity to use the latest developments\n    within CmdStan. However, building these packages requires some work and this\n    package provides tools to assist with that,",
@@ -8,7 +11,7 @@
   "relatedLink": "https://michaeldewittjr.com/staninside/",
   "issueTracker": "https://github.com/medewitt/staninside/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -63,15 +66,16 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "tinytest",
-      "name": "tinytest",
+      "identifier": "testthat",
+      "name": "testthat",
+      "version": ">= 3.0.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=tinytest"
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
     }
   ],
   "softwareRequirements": [
@@ -101,6 +105,8 @@
     }
   ],
   "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
-  "fileSize": "10.939KB",
-  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main"]
+  "fileSize": "12.171KB",
+  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main"],
+  "releaseNotes": "https://github.com/medewitt/staninside/blob/master/NEWS.md",
+  "keywords": ["r", "stan"]
 }

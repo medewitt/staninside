@@ -50,7 +50,7 @@ copy_models <- function(pkgname = "staninside", local_location  = NULL){
 								new_path =new_locations,
 								overwrite = TRUE)
 
-	invisible(new_locations)
+	message("All models have been copied to your specified location")
 
-	message("All models have been copied to your specifided location")
+	invisible(new_locations)
 }

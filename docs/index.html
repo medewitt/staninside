@@ -37,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">staninside</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.3</span>
       </span>
     </div>
 
@@ -51,6 +51,9 @@
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -77,18 +80,27 @@
 <a href="#staninside" class="anchor"></a>staninside</h1></div>
 <!-- badges: start -->
 
-<p>The goal of staninside is to …</p>
+<p>The goal of staninside is to facilitate the use of <a href="https://mc-stan.org/cmdstanr/">CmdStanR</a> and packages leveraging <a href="https://mc-stan.org/">Stan</a> code.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
+<p>From Github:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"medewitt/staninside"</span><span class="op">)</span></code></pre></div>
+<p>Alternatively, try <a href="https://medewitt.r-universe.dev/ui#builds">r-universe</a>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Enable this universe</span>
+<span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
+    medewitt <span class="op">=</span> <span class="st">'https://medewitt.r-universe.dev'</span>,
+    CRAN <span class="op">=</span> <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'staninside'</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="motivation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#motivation" class="anchor"></a>Motivation</h2>
 <p>CmdStanR is a fantastic resource for interacting with Stan. The benefits include using the latest version of Stan and associated feature (which may not be available to RStan), no need for Rcpp dependencies, and licensing (BSD vs GPL3). Personally, the ability to ship packages with the raw Stan code allows users to directly interact with the code and update it based on their needs.</p>
-<p>One issue that staninside seeks to solve is the prohibation by CRAN of manipulating a user’s files:</p>
+<p>One issue that staninside seeks to solve is the prohibition by CRAN of manipulating a user’s files:</p>
 <blockquote>
 <p>Packages should not write in the user’s home filespace (including clipboards), nor anywhere else on the file system apart from the R session’s temporary directory (or during installation in the location pointed to by TMPDIR: and such usage should be cleaned up). Installing into the system’s R installation (e.g., scripts to its bin directory) is not allowed.</p>
 </blockquote>

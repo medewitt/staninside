@@ -10,12 +10,28 @@
 coverage](https://codecov.io/gh/medewitt/staninside/branch/main/graph/badge.svg)](https://codecov.io/gh/medewitt/staninside?branch=main)
 <!-- badges: end -->
 
-The goal of staninside is to …
+The goal of staninside is to facilitate the use of
+[CmdStanR](https://mc-stan.org/cmdstanr/) and packages leveraging
+[Stan](https://mc-stan.org/) code.
 
 ## Installation
 
+From Github:
+
 ``` r
 remotes::install_github("medewitt/staninside")
+```
+
+Alternatively, try
+[r-universe](https://medewitt.r-universe.dev/ui#builds):
+
+``` r
+# Enable this universe
+options(repos = c(
+    medewitt = 'https://medewitt.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'))
+
+install.packages('staninside')
 ```
 
 ## Motivation
@@ -27,7 +43,7 @@ licensing (BSD vs GPL3). Personally, the ability to ship packages with
 the raw Stan code allows users to directly interact with the code and
 update it based on their needs.
 
-One issue that staninside seeks to solve is the prohibation by CRAN of
+One issue that staninside seeks to solve is the prohibition by CRAN of
 manipulating a user’s files:
 
 > Packages should not write in the user’s home filespace (including
