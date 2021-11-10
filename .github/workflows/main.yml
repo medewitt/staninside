@@ -16,7 +16,7 @@ jobs:
       - name: Install remotes
         run: Rscript -e 'install.packages("remotes")'
       - name: Install remotes
-        run: Rscript -e 'remotes::install_github("ropensci/codemetar", ref = "dev")'
+        run: Rscript -e 'options(repos = c(ropensci = "https://ropensci.r-universe.dev",CRAN = "https://cloud.r-project.org")); install.packages("codemetar");'
       - name: Install codemetar
         run: Rscript -e 'remotes::install_local(dependencies = c("Imports", "Depends"))'
       - name: Render codemeta
