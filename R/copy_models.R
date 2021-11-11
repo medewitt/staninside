@@ -6,6 +6,7 @@
 #' @param pkgname a string, the name of the package
 #' @param local_location a file path representing the desired location
 #'   of the local copy.
+#' @returns file path of newly created files
 #' @export
 #'
 #' @examples
@@ -16,6 +17,7 @@ copy_models <- function(pkgname = "staninside", local_location  = NULL){
 
 	if(is.null(local_location)){
 		local_location <- rappdirs::user_cache_dir(appname = pkgname)
+		cli::cli_alert("`{local_location}` will be used")
 	}
 
 	stan_code_to_copy <- find_stan_code(pkgname)
@@ -50,7 +52,7 @@ copy_models <- function(pkgname = "staninside", local_location  = NULL){
 								new_path =new_locations,
 								overwrite = TRUE)
 
-	message("All models have been copied to your specified location")
+	cli::cli_alert_success("All models have been copied to your specified location")
 
 	invisible(new_locations)
 }

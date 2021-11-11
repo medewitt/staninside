@@ -1,0 +1,32 @@
+//
+// This is a skeleton Stan Program
+
+functions {
+
+}
+
+data {
+  int<lower=0> N;
+  vector[N] y;
+}
+
+transformed data {
+
+}
+
+parameters {
+
+}
+
+transformed parameters{
+
+}
+
+model {
+  y ~ normal(mu, sigma);
+}
+
+generated quantities{
+
+}
+

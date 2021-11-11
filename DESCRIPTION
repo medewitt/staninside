@@ -28,6 +28,7 @@ Suggests:
     spelling,
     testthat (>= 3.0.0)
 Imports: 
+    cli,
     fs,
     rappdirs
 Language: en-US

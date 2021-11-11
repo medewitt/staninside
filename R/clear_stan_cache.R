@@ -6,12 +6,12 @@
 #' @param pkgname a string, the name of the package
 #' @section Warning:
 #' This will removed cached models and requires that `rappdirs` is installed
+#' @returns invisible null
 #' @export
-#' @returns invisible
 
 clear_stan_cache <- function(pkgname){
 	requireNamespace(pkgname)
 	app_loc <- rappdirs::user_cache_dir(pkgname)
 	unlink(app_loc, recursive = TRUE)
-	invisible()
+	invisible(NULL)
 }

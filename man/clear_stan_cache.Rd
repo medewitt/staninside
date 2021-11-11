@@ -10,7 +10,7 @@ clear_stan_cache(pkgname)
 \item{pkgname}{a string, the name of the package}
 }
 \value{
-invisible
+invisible null
 }
 \description{
 This function clears anything that may exist in the Stan Cache. Most
