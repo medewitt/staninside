@@ -147,7 +147,7 @@
     }
   ],
   "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
-  "fileSize": "18.904KB",
+  "fileSize": "19.504KB",
   "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main"],
   "releaseNotes": "https://github.com/medewitt/staninside/blob/master/NEWS.md",
   "keywords": [
