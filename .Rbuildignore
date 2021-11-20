@@ -11,3 +11,4 @@
 ^codemeta\.json$
 ^_push\.R$
 ^Makefile$
+^\.pre-commit-config\.yaml$

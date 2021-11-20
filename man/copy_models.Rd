@@ -12,6 +12,9 @@ copy_models(pkgname = "staninside", local_location = NULL)
 \item{local_location}{a file path representing the desired location
 of the local copy.}
 }
+\value{
+file path of newly created files
+}
 \description{
 This function extracts the Stan Code from a Package and then
 copies it to your user cache locally.
