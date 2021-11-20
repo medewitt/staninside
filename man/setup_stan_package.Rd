@@ -31,5 +31,4 @@ setup_stan_package(loc = temp_dir)
 # Examine output
 
 list.files(temp_dir, recursive = TRUE)
-
 }
