@@ -20,11 +20,11 @@ library(staninside)
 
 # Motivation
 
-Stan is a powerful language and using R (and specifically rstan) as glue to allow R users to easily interface existing models.
-Sometimes a user might wish to use a different backend (CmdStanR) or examine and modify the written Stan code directly.
+Stan is a powerful language and using R (and specifically `rstan`) as glue to allow R users to easily interface existing models.
+Sometimes a user might wish to use a different backend (`CmdStanR`) or examine and modify the written Stan code directly.
 This package seeks to allow users the ability to:
 
-* Build R packages that are not pre-compiled by rstan
+* Build R packages that are not pre-compiled by `rstan`
 * Allow users to use CmdStanR in their R packages
 * Allow users to easily see the Stan code within packages
 
@@ -32,7 +32,7 @@ This package seeks to allow users the ability to:
 
 ### Package Infrastructure
 
-If a package developer were to build a package with stanside, they first could create the package directory in the usual ways.
+If a package developer were to build a package with `staninside`, they first could create the package directory in the usual ways.
 
 Next, to build the appropriate structure the author could call
 
@@ -62,7 +62,7 @@ These separate `.stan` files can then be accessed within the Stan code with the 
 ### Model Fitting
 
 Generally speaking, there will be some function in an R package that will fit the data to a model. 
-In order to faciliate this fitting with a CmdStanR backend, a process like that below could be used.
+In order to facilitate this fitting with a CmdStanR backend, a process like that below could be used.
 
 ```r
 

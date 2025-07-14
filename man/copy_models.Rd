@@ -21,5 +21,5 @@ copies it to your user cache locally.
 }
 \examples{
 local_location <- tempdir()
-copy_models(pkgname = "staninside", local_location  = local_location)
+copy_models(pkgname = "staninside", local_location = local_location)
 }

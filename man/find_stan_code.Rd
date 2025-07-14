@@ -10,6 +10,10 @@ find_stan_code(pkgname = "staninside")
 \item{pkgname}{a string, the name of the package in which to
 look for the Stan code.}
 }
+\value{
+a list with the Stan code location within the package
+and the text of the code,
+}
 \description{
 This function looks for Stan code within a given R package
 a returns a list with the Stan code location within the package
