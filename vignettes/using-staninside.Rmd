@@ -63,6 +63,7 @@ These separate `.stan` files can then be accessed within the Stan code with the 
 
 Generally speaking, there will be some function in an R package that will fit the data to a model. 
 In order to facilitate this fitting with a CmdStanR backend, a process like that below could be used.
+Note that this model assumes that cmdstanr is installed, though this could be replaced with other ways of calling Stan (e.g., `rstan`).
 
 ```r
 
@@ -73,7 +74,7 @@ fit_my_data <- function(my_data){
     if (length(list.files(local_location, pattern = ".stan")) > 1) {
         cli::cli_alert_info("Using cached Stan models")
         cli::cli_alert_info(
-        "Use `intervalcalc::clear_cache` if you need to refresh")
+        "Use `staninside::clear_stan_cache('mypackage')` if you need to refresh")
     } else {
         cli::cli_alert_info("Copying Stan models to cache")
         staninside::copy_models(this_pkg())
@@ -81,14 +82,22 @@ fit_my_data <- function(my_data){
     }
     
     model_file_path <- file.path(local_location, paste0("base", ".stan"))
-        mod <- cmdstanr::cmdstan_model(model_file_path)
+    mod <- cmdstanr::cmdstan_model(model_file_path)
         
-   fit <- mod$sample(data = my_data)
+    fit <- mod$sample(data = my_data)
    
-   return(fit)
+    return(fit)
 }
 
 ```
+
+You now can call `fit_my_data` to fit your model.
+The underlying Stan code is stored in the user cache directory and will be compiled on the first model fitting operation.
+
+
+
+
+
 
 
 

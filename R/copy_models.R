@@ -7,6 +7,7 @@
 #' @param local_location a file path representing the desired location
 #'   of the local copy.
 #' @returns file path of newly created files
+#' @importFrom fs dir_create dir_exists file_copy
 #' @export
 #'
 #' @examples

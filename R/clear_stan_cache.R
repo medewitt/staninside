@@ -7,11 +7,12 @@
 #' @section Warning:
 #' This will removed cached models and requires that `rappdirs` is installed
 #' @returns invisible null
+#' @importFrom rappdirs user_cache_dir
 #' @export
 
-clear_stan_cache <- function(pkgname){
-	requireNamespace(pkgname)
-	app_loc <- rappdirs::user_cache_dir(pkgname)
-	unlink(app_loc, recursive = TRUE)
-	invisible(NULL)
+clear_stan_cache <- function(pkgname) {
+  requireNamespace(pkgname)
+  app_loc <- rappdirs::user_cache_dir(pkgname)
+  unlink(app_loc, recursive = TRUE)
+  invisible(NULL)
 }

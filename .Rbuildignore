@@ -12,3 +12,5 @@
 ^_push\.R$
 ^Makefile$
 ^\.pre-commit-config\.yaml$
+^doc$
+^Meta$
