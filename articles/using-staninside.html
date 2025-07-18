@@ -137,7 +137,9 @@ Stan code with the following syntax:</p>
 </h4>
 <p>Generally speaking, there will be some function in an R package that
 will fit the data to a model. In order to facilitate this fitting with a
-CmdStanR backend, a process like that below could be used.</p>
+CmdStanR backend, a process like that below could be used. Note that
+this model assumes that cmdstanr is installed, though this could be
+replaced with other ways of calling Stan (e.g., <code>rstan</code>).</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="va">fit_my_data</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">my_data</span><span class="op">)</span><span class="op">{</span></span>
@@ -147,7 +149,7 @@ CmdStanR backend, a process like that below could be used.</p>
 <span>    <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">list.files</a></span><span class="op">(</span><span class="va">local_location</span>, pattern <span class="op">=</span> <span class="st">".stan"</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
 <span>        <span class="fu">cli</span><span class="fu">::</span><span class="fu"><a href="https://cli.r-lib.org/reference/cli_alert.html" class="external-link">cli_alert_info</a></span><span class="op">(</span><span class="st">"Using cached Stan models"</span><span class="op">)</span></span>
 <span>        <span class="fu">cli</span><span class="fu">::</span><span class="fu"><a href="https://cli.r-lib.org/reference/cli_alert.html" class="external-link">cli_alert_info</a></span><span class="op">(</span></span>
-<span>        <span class="st">"Use `intervalcalc::clear_cache` if you need to refresh"</span><span class="op">)</span></span>
+<span>        <span class="st">"Use `staninside::clear_stan_cache('mypackage')` if you need to refresh"</span><span class="op">)</span></span>
 <span>    <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
 <span>        <span class="fu">cli</span><span class="fu">::</span><span class="fu"><a href="https://cli.r-lib.org/reference/cli_alert.html" class="external-link">cli_alert_info</a></span><span class="op">(</span><span class="st">"Copying Stan models to cache"</span><span class="op">)</span></span>
 <span>        <span class="fu">staninside</span><span class="fu">::</span><span class="fu"><a href="../reference/copy_models.html">copy_models</a></span><span class="op">(</span><span class="fu">this_pkg</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
@@ -155,12 +157,15 @@ CmdStanR backend, a process like that below could be used.</p>
 <span>    <span class="op">}</span></span>
 <span>    </span>
 <span>    <span class="va">model_file_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="va">local_location</span>, <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"base"</span>, <span class="st">".stan"</span><span class="op">)</span><span class="op">)</span></span>
-<span>        <span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu">cmdstanr</span><span class="fu">::</span><span class="fu">cmdstan_model</span><span class="op">(</span><span class="va">model_file_path</span><span class="op">)</span></span>
+<span>    <span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu">cmdstanr</span><span class="fu">::</span><span class="fu">cmdstan_model</span><span class="op">(</span><span class="va">model_file_path</span><span class="op">)</span></span>
 <span>        </span>
-<span>   <span class="va">fit</span> <span class="op">&lt;-</span> <span class="va">mod</span><span class="op">$</span><span class="fu">sample</span><span class="op">(</span>data <span class="op">=</span> <span class="va">my_data</span><span class="op">)</span></span>
+<span>    <span class="va">fit</span> <span class="op">&lt;-</span> <span class="va">mod</span><span class="op">$</span><span class="fu">sample</span><span class="op">(</span>data <span class="op">=</span> <span class="va">my_data</span><span class="op">)</span></span>
 <span>   </span>
-<span>   <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
+<p>You now can call <code>fit_my_data</code> to fit your model. The
+underlying Stan code is stored in the user cache directory and will be
+compiled on the first model fitting operation.</p>
 </div>
 </div>
 </div>
