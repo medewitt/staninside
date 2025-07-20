@@ -7,7 +7,7 @@
 
 [![R-CMD-check](https://github.com/medewitt/staninside/workflows/R-CMD-check/badge.svg)](https://github.com/medewitt/staninside/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/medewitt/staninside/branch/main/graph/badge.svg)](https://codecov.io/gh/medewitt/staninside?branch=main)
+coverage](https://codecov.io/gh/medewitt/staninside/branch/main/graph/badge.svg)](https://app.codecov.io/gh/medewitt/staninside?branch=main)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/staninside)](https://CRAN.R-project.org/package=staninside)
 [![R-CMD-check](https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml)
@@ -26,7 +26,7 @@ remotes::install_github("medewitt/staninside")
 ```
 
 Alternatively, try
-[r-universe](https://medewitt.r-universe.dev/ui#builds):
+[r-universe](https://medewitt.r-universe.dev/#builds):
 
 ``` r
 # Enable this universe
