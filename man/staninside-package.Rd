@@ -12,7 +12,7 @@ This package provides helper functions that can be used for integrating Stan cod
 Useful links:
 \itemize{
   \item \url{https://github.com/medewitt/staninside}
-  \item \url{https://michaeldewittjr.com/staninside/}
+  \item \url{https://medewitt.github.io/staninside/}
   \item Report bugs at \url{https://github.com/medewitt/staninside/issues}
 }
 

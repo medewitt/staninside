@@ -1,23 +1,20 @@
 {
-  "@context": [
-    "https://doi.org/10.5063/schema/codemeta-2.0",
-    "http://schema.org"
-  ],
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "staninside",
-  "description": "This package provides helper functions that can be used for integrating Stan code driven by the CmdStanR package. Using CmdStanR and pre-written Stan code can make package installation easy and less prone to fail because it removes the need for Rcpp and RStan packages(and their dependencies). Using CmdStanR will also afford users the opportunity to use the latest developments within CmdStan. However, building these packages requires some work and this package provides tools to assist with that,",
+  "description": "This package provides helper functions that can be used for integrating Stan code driven by the CmdStanR package. Using CmdStanR and pre-written Stan code can make package installation easy and less prone to fail because it removes the need for Rcpp and RStan packages(and their dependencies). Using CmdStanR will also afford users the opportunity to use the latest developments within CmdStan. However, building these packages requires some work and this package provides tools to assist with that process.",
   "name": "staninside: Facilitating the Use of Stan Within Packages",
+  "relatedLink": "https://medewitt.github.io/staninside/",
   "codeRepository": "https://github.com/medewitt/staninside",
-  "relatedLink": "https://michaeldewittjr.com/staninside/",
   "issueTracker": "https://github.com/medewitt/staninside/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.1.2 (2021-11-01)",
+  "runtimePlatform": "R version 4.3.3 (2024-02-29)",
   "author": [
     {
       "@type": "Person",
@@ -27,9 +24,6 @@
       "@id": "https://orcid.org/0000-0001-8940-1967"
     }
   ],
-  "contributor": {},
-  "copyrightHolder": {},
-  "funder": {},
   "maintainer": [
     {
       "@type": "Person",
@@ -102,14 +96,14 @@
       "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
     }
   ],
-  "softwareRequirements": [
-    {
+  "softwareRequirements": {
+    "1": {
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
       "version": ">= 3.1"
     },
-    {
+    "2": {
       "@type": "SoftwareApplication",
       "identifier": "cli",
       "name": "cli",
@@ -121,7 +115,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=cli"
     },
-    {
+    "3": {
       "@type": "SoftwareApplication",
       "identifier": "fs",
       "name": "fs",
@@ -133,7 +127,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=fs"
     },
-    {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "rappdirs",
       "name": "rappdirs",
@@ -144,14 +138,12 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=rappdirs"
-    }
-  ],
-  "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
-  "fileSize": "19.504KB",
-  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main"],
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "20.525KB",
   "releaseNotes": "https://github.com/medewitt/staninside/blob/master/NEWS.md",
-  "keywords": [
-    "r",
-    "stan"
-  ]
+  "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
+  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main", "https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml"],
+  "keywords": ["r", "stan"]
 }
