@@ -5,12 +5,11 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/medewitt/staninside/workflows/R-CMD-check/badge.svg)](https://github.com/medewitt/staninside/actions)
+[![R-CMD-check](https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/medewitt/staninside/branch/main/graph/badge.svg)](https://app.codecov.io/gh/medewitt/staninside?branch=main)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/staninside)](https://CRAN.R-project.org/package=staninside)
-[![R-CMD-check](https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of staninside is to facilitate the use of

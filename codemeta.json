@@ -141,9 +141,9 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "21.122KB",
+  "fileSize": "21.019KB",
   "releaseNotes": "https://github.com/medewitt/staninside/blob/master/NEWS.md",
   "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
-  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://app.codecov.io/gh/medewitt/staninside?branch=main", "https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml"],
+  "contIntegration": ["https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/medewitt/staninside?branch=main"],
   "keywords": ["r", "stan"]
 }
