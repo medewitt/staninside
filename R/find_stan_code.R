@@ -12,9 +12,7 @@
 #' @examples
 #' find_stan_code(pkgname = "staninside")
 find_stan_code <- function(pkgname = "staninside") {
-  if (!pkgname %in% rownames(installed.packages())) {
-    stop(sprintf("`%s` is not an installed package.\n", pkgname))
-  }
+  requireNamespace(pkgname)
 
   stan_pkg_location <- fs::dir_ls(system.file(package = pkgname),
     glob = "*.stan", recurse = TRUE
