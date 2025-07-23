@@ -3,8 +3,7 @@
 #' Create directory and helper files for a Stan package using
 #' CmdStanR
 #'
-#' @param loc a file.path indicating package root with a default of the
-#'     current working directory
+#' @param loc a file.path indicating package root.
 #' @param use_all a logical indicating if each section of Stan code
 #'     should have it's own directory with a default of \code{TRUE}
 #' @returns invisible null
@@ -22,12 +21,12 @@
 #' @export
 
 setup_stan_package <- function(loc = NULL, use_all = TRUE) {
-  if (!is.null(loc)) {
-    if (!dir.exists(loc)) {
-      stop("The directory you have indicated does not exist,")
-    }
-  } else {
-    loc <- getwd()
+  if (is.null(loc)) {
+    stop("A location must be provided")
+  }
+
+  if (!dir.exists(loc)) {
+    stop("The directory you have indicated does not exist,")
   }
 
   target_path <- file.path(loc, "inst", "stan")

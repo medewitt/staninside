@@ -4,9 +4,9 @@
 \name{staninside-package}
 \alias{staninside}
 \alias{staninside-package}
-\title{staninside: Facilitating the Use of Stan Within Packages}
+\title{staninside: "Facilitating the Use of 'Stan' Within Packages"}
 \description{
-Infrastructure and functions that can be used for integrating Stan code into stand alone R packages which in turn use the CmdStan engine (often accessed through CmdStanR). Using CmdStanR and pre-written Stan code can make package installation easy and less prone to fail because it removes the need for Rcpp and RStan packages(and their dependencies). Using CmdStanR will also afford users the opportunity to use the latest developments within CmdStan. However, building these packages requires some work and this package provides tools to assist with that process.
+Infrastructure and functions that can be used for integrating 'Stan' (Carpenter et al., 2017 \doi{10.18637/jss.v076.i01}) code into stand alone R packages which in turn use the 'CmdStan' engine (often accessed through 'CmdStanR' (Stan Development Team, 2025 \url{https://mc-stan.org/users/interfaces/cmdstanr/})). Using 'CmdStanR' and pre-written 'Stan' code can make package installation easy. Using 'staninside' offers a way to cache user-compiled 'Stan' models in user-specified directories reducing the need to recompile the same model multiple times.
 }
 \seealso{
 Useful links:

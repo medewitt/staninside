@@ -7,8 +7,7 @@
 setup_stan_package(loc = NULL, use_all = TRUE)
 }
 \arguments{
-\item{loc}{a file.path indicating package root with a default of the
-current working directory}
+\item{loc}{a file.path indicating package root.}
 
 \item{use_all}{a logical indicating if each section of Stan code
 should have it's own directory with a default of \code{TRUE}}
