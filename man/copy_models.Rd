@@ -10,7 +10,8 @@ copy_models(pkgname = "staninside", local_location = NULL)
 \item{pkgname}{a string, the name of the package}
 
 \item{local_location}{a file path representing the desired location
-of the local copy.}
+of the local copy. If "default" is provided, the function will use
+the user cache directory for the package.}
 }
 \value{
 file path of newly created files

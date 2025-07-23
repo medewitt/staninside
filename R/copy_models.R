@@ -5,7 +5,8 @@
 #'
 #' @param pkgname a string, the name of the package
 #' @param local_location a file path representing the desired location
-#'   of the local copy.
+#'   of the local copy. If "default" is provided, the function will use
+#'   the user cache directory for the package.
 #' @returns file path of newly created files
 #' @importFrom fs dir_create dir_exists file_copy
 #' @export
@@ -15,8 +16,16 @@
 #' copy_models(pkgname = "staninside", local_location = local_location)
 copy_models <- function(pkgname = "staninside", local_location = NULL) {
   if (is.null(local_location)) {
+    stop("A location must be provided")
+  }
+
+  if (local_location == "default") {
     local_location <- rappdirs::user_cache_dir(appname = pkgname)
     cli::cli_alert("`{local_location}` will be used")
+  } else {
+    if (!dir.exists(local_location)) {
+      stop("The directory you have indicated does not exist")
+    }
   }
 
   stan_code_to_copy <- find_stan_code(pkgname)

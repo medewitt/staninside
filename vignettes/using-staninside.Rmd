@@ -37,7 +37,8 @@ If a package developer were to build a package with `staninside`, they first cou
 Next, to build the appropriate structure the author could call
 
 ```r
-setup_stan_package()
+temp_dir <- tempdir()
+setup_stan_package(loc = temp_dir)
 ```
 
 This function will create the following directory tree:
@@ -77,7 +78,7 @@ fit_my_data <- function(my_data){
         "Use `staninside::clear_stan_cache('mypackage')` if you need to refresh")
     } else {
         cli::cli_alert_info("Copying Stan models to cache")
-        staninside::copy_models(this_pkg())
+        staninside::copy_models(pkgname = "mypackage", local_location = local_location)
         cli::cli_alert_success("Models copied!")
     }
     

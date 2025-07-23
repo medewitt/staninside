@@ -1,7 +1,7 @@
 # Make model available
 
 local_location <- tempdir()
-copy_models(pkgname = "staninside", local_location  = local_location)
+copy_models(pkgname = "staninside", local_location = local_location)
 
 test_stan <- list.files(local_location, full.names = TRUE, pattern = "test.stan")
 
@@ -10,7 +10,9 @@ test_that("models from test package have been copied", {
 })
 
 test_that("test that all stan directories are available", {
-	expect_true(dir.exists(file.path(local_location, "functions")))
+  expect_true(dir.exists(file.path(local_location, "functions")))
 })
 
-
+test_that("test that when no location is provided, an error is thrown", {
+  expect_error(copy_models(pkgname = "staninside"))
+})
