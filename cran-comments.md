@@ -4,7 +4,8 @@
 
 * This is a new package and a resubmission
 * This package has been tested on local MAC and rub using the Rhub Github Actions tools to test Linux, Mac, Windows. 
-
+* Possibily mispelled words identified in the description are not false alarms and occur from valid language (i.e, "pre-written" and "et al.")
+* 
 ### Issue resolved from submission
 - Properly cited methods in the DESCRIPTION
 - Update packages, software, and APIs with single quotations

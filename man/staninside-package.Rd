@@ -6,7 +6,7 @@
 \alias{staninside-package}
 \title{staninside: "Facilitating the Use of 'Stan' Within Packages"}
 \description{
-Infrastructure and functions that can be used for integrating 'Stan' (Carpenter et al., 2017 \doi{10.18637/jss.v076.i01}) code into stand alone R packages which in turn use the 'CmdStan' engine (often accessed through 'CmdStanR' (Stan Development Team, 2025 \url{https://mc-stan.org/users/interfaces/cmdstanr/})). Using 'CmdStanR' and pre-written 'Stan' code can make package installation easy. Using 'staninside' offers a way to cache user-compiled 'Stan' models in user-specified directories reducing the need to recompile the same model multiple times.
+Infrastructure and functions that can be used for integrating 'Stan' (Carpenter et al. (2017) \doi{10.18637/jss.v076.i01}) code into stand alone R packages which in turn use the 'CmdStan' engine which is often accessed through 'CmdStanR'. Details given in Stan Development Team (2025) \url{https://mc-stan.org/cmdstanr/}. Using 'CmdStanR' and pre-written 'Stan' code can make package installation easy. Using 'staninside' offers a way to cache user-compiled 'Stan' models in user-specified directories reducing the need to recompile the same model multiple times.
 }
 \seealso{
 Useful links:

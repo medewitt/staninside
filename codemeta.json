@@ -2,8 +2,8 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "SoftwareSourceCode",
   "identifier": "staninside",
-  "description": "This package provides helper functions that can be used for integrating Stan code driven by the CmdStanR package. Using CmdStanR and pre-written Stan code can make package installation easy and less prone to fail because it removes the need for Rcpp and RStan packages(and their dependencies). Using CmdStanR will also afford users the opportunity to use the latest developments within CmdStan. However, building these packages requires some work and this package provides tools to assist with that process.",
-  "name": "staninside: Facilitating the Use of Stan Within Packages",
+  "description": "Infrastructure and functions that can be used for integrating 'Stan' (Carpenter et al. (2017) <doi:10.18637/jss.v076.i01>) code into stand alone R packages which in turn use the 'CmdStan' engine which is often accessed through 'CmdStanR'. Details given in Stan Development Team (2025) <https://mc-stan.org/cmdstanr/>. Using 'CmdStanR' and pre-written 'Stan' code can make package installation easy. Using 'staninside' offers a way to cache user-compiled 'Stan' models in user-specified directories reducing the need to recompile the same model multiple times.",
+  "name": "staninside: \"Facilitating the Use of 'Stan' Within Packages\"",
   "relatedLink": "https://medewitt.github.io/staninside/",
   "codeRepository": "https://github.com/medewitt/staninside",
   "issueTracker": "https://github.com/medewitt/staninside/issues",
@@ -141,9 +141,9 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "20.525KB",
+  "fileSize": "21.122KB",
   "releaseNotes": "https://github.com/medewitt/staninside/blob/master/NEWS.md",
   "readme": "https://github.com/medewitt/staninside/blob/main/README.md",
-  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://codecov.io/gh/medewitt/staninside?branch=main", "https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml"],
+  "contIntegration": ["https://github.com/medewitt/staninside/actions", "https://app.codecov.io/gh/medewitt/staninside?branch=main", "https://github.com/medewitt/staninside/actions/workflows/R-CMD-check.yaml"],
   "keywords": ["r", "stan"]
 }
