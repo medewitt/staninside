@@ -92,17 +92,15 @@
 <div class="section level2">
 <h2 id="motivation">Motivation<a class="anchor" aria-label="anchor" href="#motivation"></a>
 </h2>
-<p>Stan is a powerful language and using R (and specifically
-<code>rstan</code>) as glue to allow R users to easily interface
-existing models. Sometimes a user might wish to use a different backend
-(<code>CmdStanR</code>) or examine and modify the written Stan code
-directly. This package seeks to allow users the ability to:</p>
+<p>‘Stan’ is a powerful language and using R (and specifically ‘rstan’)
+as glue to allow R users to easily interface existing models. Sometimes
+a user might wish to use a different backend (‘CmdStanR’) or examine and
+modify the written ‘Stan’ code directly. This package seeks to allow
+users the ability to:</p>
 <ul>
-<li>Build R packages that are not pre-compiled by
-<code>rstan</code>
-</li>
-<li>Allow users to use CmdStanR in their R packages</li>
-<li>Allow users to easily see the Stan code within packages</li>
+<li>Build R packages that are not pre-compiled by ‘rstan’</li>
+<li>Allow users to use ‘CmdStanR’ in their R packages</li>
+<li>Allow users to easily see the ‘Stan’ code within packages</li>
 </ul>
 <div class="section level3">
 <h3 id="building-a-stan-package">Building a Stan Package<a class="anchor" aria-label="anchor" href="#building-a-stan-package"></a>
@@ -110,9 +108,8 @@ directly. This package seeks to allow users the ability to:</p>
 <div class="section level4">
 <h4 id="package-infrastructure">Package Infrastructure<a class="anchor" aria-label="anchor" href="#package-infrastructure"></a>
 </h4>
-<p>If a package developer were to build a package with
-<code>staninside</code>, they first could create the package directory
-in the usual ways.</p>
+<p>If a package developer were to build a package with ‘staninside’,
+they first could create the package directory in the usual ways.</p>
 <p>Next, to build the appropriate structure the author could call</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">temp_dir</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -127,10 +124,10 @@ in the usual ways.</p>
 │   │   ├── parameters
 </code></pre>
 <p>This provides the user with a structure to use when building their
-Stan programs. For complicated programs, it is sometimes useful to break
-up the Stan code blocks into separate files stored in sub-directories.
-These separate <code>.stan</code> files can then be accessed within the
-Stan code with the following syntax:</p>
+‘Stan’ programs. For complicated programs, it is sometimes useful to
+break up the ‘Stan’ code blocks into separate files stored in
+sub-directories. These separate <code>.stan</code> files can then be
+accessed within the ‘Stan’ code with the following syntax:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode stan"><code class="sourceCode stan"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># include functions/my_functions.stan</span></span></code></pre></div>
 </div>
 <div class="section level4">
@@ -138,9 +135,9 @@ Stan code with the following syntax:</p>
 </h4>
 <p>Generally speaking, there will be some function in an R package that
 will fit the data to a model. In order to facilitate this fitting with a
-CmdStanR backend, a process like that below could be used. Note that
-this model assumes that cmdstanr is installed, though this could be
-replaced with other ways of calling Stan (e.g., <code>rstan</code>).</p>
+‘CmdStanR’ backend, a process like that below could be used. Note that
+this model assumes that ‘cmdstanr’ is installed, though this could be
+replaced with other ways of calling ‘Stan’ (e.g., ‘rstan’).</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="va">fit_my_data</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">my_data</span><span class="op">)</span><span class="op">{</span></span>
@@ -165,7 +162,7 @@ replaced with other ways of calling Stan (e.g., <code>rstan</code>).</p>
 <span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
 <p>You now can call <code>fit_my_data</code> to fit your model. The
-underlying Stan code is stored in the user cache directory and will be
+underlying ‘Stan’ code is stored in the user cache directory and will be
 compiled on the first model fitting operation.</p>
 </div>
 </div>
