@@ -11,5 +11,4 @@
 - Update packages, software, and APIs with single quotations
 - Removed all `getwd` statements as defaults and require user to explicity enter file path
 - Vignettes do not utilize any local, package, or user directories
-- Title has double quotes
 - Removed use of `installed.packages()` to use `requireNamespace`

@@ -1,5 +1,5 @@
 Package: staninside
-Title: "Facilitating the Use of 'Stan' Within Packages"
+Title: Facilitating the Use of 'Stan' Within Packages
 Version: 0.0.4
 Authors@R: 
     person(given = "Michael",
